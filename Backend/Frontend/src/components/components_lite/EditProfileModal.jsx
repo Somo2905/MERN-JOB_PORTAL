@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   Dialog,
+  DialogClose,
   DialogContent,
   DialogFooter,
   DialogHeader,
@@ -14,7 +15,6 @@ import { toast } from "sonner";
 import { USER_API_ENDPOINT } from "@/utils/data";
 import { setUser } from "@/redux/authSlice";
 import { Loader2 } from "lucide-react";
-
 const EditProfileModal = ({ open, setOpen }) => {
   const [loading, setLoading] = useState(false);
   const { user } = useSelector((store) => store.auth);
@@ -81,11 +81,18 @@ const EditProfileModal = ({ open, setOpen }) => {
 
   return (
     <div>
-      <Dialog open={open}>
+      <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent
           className="sm:max-w-[500px]"
           onInteractOutside={() => setOpen(false)}
         >
+      <DialogClose asChild>
+    <button
+      className="absolute top-4 right-4 text-gray-400 hover:text-gray-700"
+      aria-label="Close"
+    >
+    </button>
+  </DialogClose>
           <DialogHeader>
             <DialogTitle>Edit Profile</DialogTitle>
           </DialogHeader>

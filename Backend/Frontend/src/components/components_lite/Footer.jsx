@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -12,9 +11,9 @@ const Footer = () => {
           backgroundColor: "#f1f1f1",
         }}
       >
-        <p>© 2024 Sunfire Sensei. All rights reserved.</p>
+        <p>© 2025 Job Spring. All rights reserved.</p>
         <p>
-          Powered by <a href="https://github.com/ankitpathak62">Ankit Pathak</a>
+          Powered by <a href="https://github.com/somo2905">Soumyabrata Das</a>
         </p>
         <p>
           <Link to={"/PrivacyPolicy"}>Privacy Policy </Link> |

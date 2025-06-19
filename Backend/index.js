@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 const corsOptions = {
-  origin: ["https://mern-jobportal-1-c0tn.onrender.com"],
+  origin: ["https://mern-job-portal-1l64.onrender.com"],
   credentials: true,
 };
 
